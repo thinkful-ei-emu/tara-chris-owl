@@ -9,6 +9,7 @@ class App extends React.Component {
       <main>
           {<ParticipantList participants={this.props.store.participants} />}
           {<Stage participants={this.props.store.participants} />}
+          {<ChatLog chatEvents={this.props.store.chatEvents} participants={this.props.store.participants} />}
       </main>)
 
   }
