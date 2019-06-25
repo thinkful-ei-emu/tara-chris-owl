@@ -8,9 +8,9 @@ class ChatLog extends React.Component {
         <ChatBox key={item.participantId} type={item.type} message={item.message} time={item.time} id={item.participantId} participants={this.props.participants}/>);
         
         return (
-            <div className="chatLog">
+            <section className="chatLog hidden app-level">
                 {chatWindow}
-            </div>
+            </section>
         )
     }
 }

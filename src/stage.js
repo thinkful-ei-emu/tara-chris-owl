@@ -10,7 +10,7 @@ class Stage extends React.Component {
     });
 
     return (
-      <section class="stage">
+      <section class="stage app-level">
         {stagePars}
       </section>
     );

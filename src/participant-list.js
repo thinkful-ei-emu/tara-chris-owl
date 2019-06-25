@@ -39,7 +39,7 @@ render(){
   );
 
   return (
-    <section className="ParticipantList">
+    <section className="ParticipantList app-level">
       {inParList}
       {outParList}
     </section>

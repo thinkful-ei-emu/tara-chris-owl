@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main {
+    display:flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.ParticipantList {
+    width:25%;
+    text-align: center;
+    overflow: auto;
+}
+
+.stage {
+    display:flex;
+    width:75%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-color: grey;
+}
+
+
+.hidden {
+    display: none;
+}
