@@ -3,24 +3,12 @@ import ChatBox from './chatbox'
 
 class ChatLog extends React.Component {
     render() {
-        let newArray = [];
-
-        this.props.chatEvents.forEach((event, eventId) => {
-            newArray.push(event);
-            this.props.participants.forEach((participant) => {
-                if(event.participantId === participant.id) {
-                    newArray[eventId].name = participant.name;
-                    newArray[eventId].avatar = participant.avatar;
-                };
-            })
-        });
+        let chatWindow = this.props.chatEvents.map((item) => 
         
-        
-        let chatWindow = newArray.map((item) =>
-        <ChatBox key={item.participantId} name={item.name} avatar={item.avatar} type={item.type} message={item.message} time={item.time} />);
+        <ChatBox key={item.participantId} type={item.type} message={item.message} time={item.time} id={item.participantId} participants={this.props.participants}/>);
         
         return (
-            <div class="chatLog">
+            <div className="chatLog">
                 {chatWindow}
             </div>
         )

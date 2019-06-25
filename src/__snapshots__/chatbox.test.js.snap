@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Participant Component renders the UI as expected 1`] = `
+<div
+  className="chatBox"
+>
+  <p>
+    <em />
+     gave a thumbs down
+  </p>
+</div>
+`;

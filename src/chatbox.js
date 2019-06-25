@@ -2,13 +2,25 @@ import React from 'react';
 
 class ChatBox extends React.Component {
     render() {
-        const { name, avatar, type, time, message } = this.props;
+        const { type, time, message, id } = this.props;
+
+        console.log(this.props.participants);
+        let name;
+        let avatar;
+        this.props.participants.forEach(participant => {
+            if (id === participant.id) {
+                name = participant.name;
+                avatar = participant.avatar;
+            }
+        });
+        
+
         let chat;
         if(type === 'message'){
             chat = (
-                <div class="chatBox">
+                <div className="chatBox">
                     <img src={avatar} alt="avatar" />
-                    <p><h5>{name}</h5> {new Date(time)}</p>
+                    <p><em>{name}</em> {new Date(time).toTimeString()}</p>
                     <p>{message}</p>
                 </div>
             );
@@ -16,65 +28,63 @@ class ChatBox extends React.Component {
         else{
             if(type === 'thumbs-up'){
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> gave a thumbs up</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> gave a thumbs up</p>
                 </div>
                 );
             }
             else if(type === 'thumbs-down'){
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> gave a thumbs down</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> gave a thumbs down</p>
                 </div>
                 );
             }
             else if(type === 'raise-hand'){
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> raised their hand</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> raised their hand</p>
                 </div>
                 );
             }
             else if(type === 'clap'){
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> clapped</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> clapped</p>
                 </div>
                 );
             }
             else if(type === 'join'){
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> joined</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> joined</p>
                 </div>
                 );
             }
             else if(type === 'leave'){
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> left the session</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> left the session</p>
                 </div>
                 );
             }
             else if(type === 'join-stage'){
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> joined the stage</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> joined the stage</p>
                 </div>
                 );
             }
             else {
                 chat = (
-                <div class="chatBox">
-                    <p><h5>{name}</h5> left the stage</p>
+                <div className="chatBox">
+                    <p><em>{name}</em> left the stage</p>
                 </div>
                 );
             }            
         }
 
-        return (
-            {chat}
-        )
+        return chat;
     }
 }
 

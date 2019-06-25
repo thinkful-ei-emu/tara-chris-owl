@@ -2,6 +2,7 @@ import React from 'react';
 // import './App.css';
 import ParticipantList from './participant-list.js';
 import Stage from './stage';
+import ChatLog from './chatlog';
 
 class App extends React.Component {
   render() {
