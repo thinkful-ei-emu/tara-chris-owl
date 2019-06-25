@@ -11,7 +11,7 @@ class Participant extends React.Component {
       sessionStatus = "on stage";
     }
 
-    else if (this.props.inString==="in-session") {
+    else if (this.props.inSessionString==="in-session") {
       sessionStatus = "in session";
     }
 

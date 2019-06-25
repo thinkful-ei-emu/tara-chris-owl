@@ -7,8 +7,8 @@ class ParticipantList extends React.Component {
 //renders all of those
 
 render(){
-  let inSessionArray;
-  let outSessionArray;
+  let inSessionArray = [];
+  let outSessionArray = [];
 
   this.props.participants.forEach(participant => {
     if (participant.inSession) {
@@ -30,11 +30,18 @@ render(){
   })
 
 
-  let participantsList;
+  let inParList = inSessionArray.map((item) =>
+    <Participant keykey={item.id} name={item.name} avatar={item.avatar} inSessionString={item.inSessionString} onStage={item.onStage} />
+  );
+
+  let outParList = outSessionArray.map((item) =>
+    <Participant keykey={item.id} name={item.name} avatar={item.avatar} inSessionString={item.inSessionString} onStage={item.onStage} />
+  );
 
   return (
     <div className="ParticipantList">
-      {participantsList}
+      {inParList}
+      {outParList}
     </div>
   )
 }
