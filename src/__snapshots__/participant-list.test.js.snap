@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Participant Component renders the UI as expected 1`] = `
-<div
+<section
   className="ParticipantList"
 >
   <div
@@ -22,5 +22,5 @@ exports[`Participant Component renders the UI as expected 1`] = `
       on stage
     </p>
   </div>
-</div>
+</section>
 `;

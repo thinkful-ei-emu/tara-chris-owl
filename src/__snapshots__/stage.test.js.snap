@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stage Component renders the UI as expected 1`] = `
+<section
+  class="stage"
+>
+  <div
+    className="stage-tile"
+  >
+    <h3>
+      Ashla Attwool
+    </h3>
+    <button />
+    <button />
+    <img
+      alt="Ashla Attwool's avatar"
+      src="https://robohash.org/iustodoloremqueinventore.jpg?size=200x200&set=set1"
+    />
+  </div>
+</section>
+`;

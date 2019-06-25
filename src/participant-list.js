@@ -39,10 +39,10 @@ render(){
   );
 
   return (
-    <div className="ParticipantList">
+    <section className="ParticipantList">
       {inParList}
       {outParList}
-    </div>
+    </section>
   )
 }
 }
