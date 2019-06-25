@@ -18,7 +18,7 @@ class App extends React.Component {
           {<Stage participants={this.props.store.participants} />}
         <footer>
           <div class="interactions"><button>Hide Window</button><button>Thumbs Up</button><button>Thumbs Down</button><button>Raise Hand</button><button>Clap</button></div>
-          <div class="participants"></div>
+          <div class="participants">Participant Images</div>
           <div class=""><button>Rate Conversation</button><button>Toggle Camera</button><button>Toggle Mic</button><button>Share Screen</button><button>Leave Stage</button></div>
         </footer>
       </main>)
